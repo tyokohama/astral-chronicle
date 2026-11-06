@@ -1,0 +1,13 @@
+# 第4章 ステージ4-8「黒霧の渓谷・深淵ボス」スキル定義 (PR #142)
+stage_code: "4-8"
+stage_name: "黒霧の渓谷・深淵ボス"
+recommended_power: 42000
+skills:
+  - skill_id: "abyss_roar_paralyze"
+    name: "全体麻痺咆哮"
+    trigger_turn: 3
+    target: "ALL_ALLIES"
+    effect: "PARALYZE"
+    probability: 0.85        # PR #142 で 85% に設定（離脱急増の原因）
+    duration_turns: 3        # 継続 3 ターン
+    ignore_resist: true      # 状態異常耐性無視（ヒーラーの耐性装備が無効化される原因）
